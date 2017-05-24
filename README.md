@@ -2,7 +2,14 @@
 
 stack-langc is a simple compiler written in _Rust_ to translate the given simple postfix expression into 
 Stack-VM instructions.
-To ease the writing if instruction to vm in hexdeciamal codes, stack-langc does it.
+To ease the writing of instruction to vm in hexdeciamal codes, stack-langc does it.
+
+
+------------------------------------------------------------
+
+### Supported basic expression
+
+1 3 + 5 * #order of evaluation Left to Right (ans=20)
 
 ------------------------------------------------------------
 
