@@ -45,7 +45,7 @@ Create file called `program.vm` as follows
     
     32 22 + 
     
-    #order of evaluation Left to Right (ans=20)
+    #order of evaluation Left to Right (ans=54)
 
 compile the program using `stack-langc`, it will generate instruction as follows
 
