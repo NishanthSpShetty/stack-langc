@@ -11,7 +11,6 @@ pub fn lexer(text:&str) -> Vec<Token> {
 	
 	
 	for ch in text.chars(){
-//		println!(" {} ",ch);
 		
 		match ch {
 			' '|'\n' => {
@@ -40,7 +39,6 @@ pub fn lexer(text:&str) -> Vec<Token> {
 fn is_number(s:&String) -> bool {
 	for i in s.chars(){
 		if !i.is_digit(10){ //radix = decimal
-//			println!("not number ");		
 			return false;
 		}
 	}
@@ -69,12 +67,9 @@ fn map_to_number(s:&String) -> i32 {
 pub fn parser(token:Vec<Token>) -> Vec<i32>{
 	let mut vec:Vec<i32> = Vec::new();	
 	for i in token{
-//		 println!("{}.", i.token_val.len());
 		 if is_number(&i.token_val) {
-//		 	println!("Number");
 			vec.push(to_number(&i.token_val));
 		 }else{
-//		 	println!("instruction");
 		 	vec.push(map_to_number(&i.token_val));	
 		 }
 	

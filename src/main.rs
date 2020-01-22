@@ -22,18 +22,10 @@ fn main() {
 	}
 
 	let filename = argv[1].clone();
-
-	//read the source file
-	let file = match File::open(filename){
-		Ok(f) => f,
-		Err(..) => panic!("FATAL : failed to open file"),
-	};
-
-	let mut reader = BufReader::new(&file);
-	let mut input = String::new();
-	reader.read_to_string(&mut input).expect(" IOError ");
+    let mut  input  = String::new();	
+    File::open(filename).expect("Failed to open file").read_to_string(&mut input ).expect("Failed to read file");
 	
-	//tokenize the given input
+    //tokenize the given input
 	let tok = lexer(input.as_str()); //pass as a &str
 	let parsed_data = parser(tok);
 	
